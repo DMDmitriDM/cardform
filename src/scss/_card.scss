@@ -1,0 +1,193 @@
+/* ============================================ */
+/* ============= card ========================= */
+/* ============================================ */
+
+.box--set {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px 20px;
+}
+
+.box__title {
+  margin: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form--set {
+  border: 2px solid $grey-bold;
+  border-radius: 10px;
+  padding: 15px 20px;
+  max-width: 349px;
+  width: 100%;
+}
+
+.form__box-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form__box-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 20px;
+
+  &:nth-child(1) {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    max-width: 205px;
+    width: 100%;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 10px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  &:nth-child(3) {
+    margin-right: 20px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  &:nth-child(4) {
+    max-width: 205px;
+    width: 100%;
+  }
+}
+
+.form__box-title {
+  margin-bottom: 5px;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  font-size: 14px;
+}
+
+.form__input {
+  border: 2px solid $grey-light;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 40px;
+  color: $black-medium;
+  background-color: $grey-light;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form__input--error {
+  background-color: $red;
+}
+
+.form__input {
+  &::selection {
+    background-color: $red-light;
+  }
+
+  &:focus-visible {
+    border-color: $mango;
+  }
+
+  @media (hover: hover) {
+    &:not(:focus-visible):hover {
+      color: $mango;
+    }
+  }
+
+  &:active {
+    border-color: $orange;
+    color: $orange;
+  }
+}
+
+.form__box-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form__img-wrap {
+  border-radius: 5px;
+  width: 50px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.form__img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form__box-btn {
+  text-align: center;
+}
+
+.form__btn {
+  border: 2px solid $mango;
+  border-radius: 10px;
+  padding: 8px 10px;
+  max-width: 245px;
+  width: 100%;
+  min-height: 40px;
+  color: #e9d9d9;
+  background: $mango;
+  outline: none;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:focus-visible {
+    border-color: $orange;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: $brown;
+      background-color: $brown;
+    }
+  }
+
+  &:active {
+    border-color: $orange;
+    background-color: $orange;
+  }
+
+  &:disabled {
+    border-color: $grey-medium;
+    background-color: $grey-medium;
+    cursor: default;
+  }
+}
+
+@media (max-width: 399px) {
+  .form__box-inputs {
+    justify-content: center;
+  }
+
+  .form__box-input:nth-child(1) {
+    margin-right: 0;
+    max-width: 245px;
+  }
+
+  .form__box-input:nth-child(2) {
+    margin-right: 70px;
+  }
+
+  .form__box-input:nth-child(3) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .form__box-input:nth-child(4) {
+    max-width: 245px;
+  }
+}

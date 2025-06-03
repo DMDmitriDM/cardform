@@ -1,0 +1,52 @@
+/* ============================================ */
+/* ================ global ==================== */
+/* ============================================ */
+
+html {
+	box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.body-reset {
+  min-width: 320px;
+  font-family: 'Roboto', arial, sans-serif;
+  background-color: $gold-light;
+}
+
+/* ============================================ */
+/* ================ general =================== */
+/* ============================================ */
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.img-max {
+  max-width: 100%;
+}
+
+.link-reset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
